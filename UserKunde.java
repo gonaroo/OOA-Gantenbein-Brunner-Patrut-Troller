@@ -1,5 +1,5 @@
 
-public class UserKunde {
+public class UserKunde extends User{
 
 	private String email;
 
@@ -13,7 +13,7 @@ public class UserKunde {
 	}
 
 	public double place(double value) {
-		// if adress 0 then RTDR
+		// if address 0 then RTDR
 		
 		
 		

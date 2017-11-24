@@ -1,8 +1,8 @@
 
-public class UserAdmin {
+public class UserAdmin extends User{
 
 	public String check(double value) {
-		// if adress 0 then RTDR
+		// if address 0 then RTDR
 
 		NewEnginePaiRiT b = new NewEnginePaiRiT(value);
 

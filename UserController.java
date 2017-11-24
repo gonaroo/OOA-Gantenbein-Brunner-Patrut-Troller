@@ -1,5 +1,5 @@
 
-public class UserController {
+public class UserController extends User{
 
 	public String analyze(double value) {
 		// if adress0 then ArtDR
