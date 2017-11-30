@@ -12,6 +12,8 @@ public class NewEnginePaiRiT extends MainEngine {
 	
 	public String check() {
 
+		
+		//this is used by Controller
 		String checkMessage;
 		checkMessage = "ok";
 		return checkMessage;
@@ -20,6 +22,10 @@ public class NewEnginePaiRiT extends MainEngine {
 
 	public String useAlgoTwo(double value) {
 
+		
+		//Execute the Input from Algo2
+		
+		
 		MainerAlgo2 e = new MainerAlgo2();
 
 		return e.AlgoTwo();

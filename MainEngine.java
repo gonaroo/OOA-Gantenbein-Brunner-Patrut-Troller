@@ -19,5 +19,4 @@ public class MainEngine extends Banlage {
 		this.value = value;
 
 	}
-
 }
