@@ -1,5 +1,5 @@
 
-public class ArtDR {
+public class RTDR {
 
 	// import http:// Table XY
 	// send to userKunde
