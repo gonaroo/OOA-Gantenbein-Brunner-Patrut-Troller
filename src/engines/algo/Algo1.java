@@ -1,5 +1,6 @@
+package src.engines.algo;
 
-public class MainerAlgo1 {
+public class Algo1 {
 
 	// read API
 	// vergleiche currentArbitrage

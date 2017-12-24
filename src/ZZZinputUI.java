@@ -1,10 +1,16 @@
+package src;
+
+
+import src.user.Admin;
+import src.user.Controller;
+import src.user.Kunde;
 
 public class ZZZinputUI {
 	public static void main(String[] args) {
 
-		UserAdmin ka = new UserAdmin();
-		UserController kc = new UserController();
-		UserKunde kk = new UserKunde();
+		Admin ka = new Admin();
+		Controller kc = new Controller();
+		Kunde kk = new Kunde();
 
 		System.out.println(ka.check(2));
 		System.out.println(kc.analyze(1));

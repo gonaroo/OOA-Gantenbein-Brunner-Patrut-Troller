@@ -1,7 +1,10 @@
+package src.engines;
 
-public class NewEnginePaiRiT extends MainEngine {
+import src.engines.algo.Algo2;
 
-	public NewEnginePaiRiT(double value) {
+public class PaiRiT extends MainEngine {
+
+	public PaiRiT(double value) {
 		super(value);
 		// TODO Auto-generated constructor stub
 	}
@@ -26,9 +29,10 @@ public class NewEnginePaiRiT extends MainEngine {
 		//Execute the Input from Algo2
 		
 		
-		MainerAlgo2 e = new MainerAlgo2();
+		Algo2 e = new Algo2();
 
 		return e.AlgoTwo();
+		// da stimmt was nöd
 
 	}
 

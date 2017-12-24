@@ -1,7 +1,10 @@
+package src.engines;
 
-public class NewEngineArbitrage extends MainEngine {
+import src.engines.algo.Algo1;
 
-	public NewEngineArbitrage(double value) {
+public class Arbitrage extends MainEngine {
+
+	public Arbitrage(double value) {
 		super(value);
 		// TODO Auto-generated constructor stub
 	}
@@ -20,7 +23,7 @@ public class NewEngineArbitrage extends MainEngine {
 
 	public String useAlgoOne(double value) {
 
-		MainerAlgo1 d = new MainerAlgo1();
+		Algo1 d = new Algo1();
 
 		return d.AlgoOne();
 
