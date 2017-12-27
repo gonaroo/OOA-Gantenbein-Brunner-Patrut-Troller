@@ -1,6 +1,6 @@
 package src.user;
 
-import src.engines.MainEngine;
+import src.anlage.Anlage;
 
 public class Kunde extends User {
 
@@ -8,7 +8,7 @@ public class Kunde extends User {
 		// if address 0 then RTDR
 
 		// or
-		MainEngine a = new MainEngine(value);
+		Anlage a = new Anlage(value);
 		// NewEngineArbitrage
 		// XOR
 		// NewEnginePaiRiT
@@ -16,3 +16,4 @@ public class Kunde extends User {
 		return a.place();
 	}
 }
+

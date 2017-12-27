@@ -1,24 +1,11 @@
 package src.engines;
 
-import src.anlage.Banlage;
-
-public class MainEngine extends Banlage {
-
-	private double value = 0;
-
-	public double place() {
-
-		
-		// if adress 1 then EngineArbitrage
-		// if adress 2 then EnginePaiRiT
-
-		return value * 2;
-
-	}
+public abstract class MainEngine {
 
 	public MainEngine(double value) {
-
-		this.value = value;
-
+		super();
+		// TODO Auto-generated constructor stub
 	}
+
+
 }
