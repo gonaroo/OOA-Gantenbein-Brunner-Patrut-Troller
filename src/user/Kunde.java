@@ -1,6 +1,7 @@
 package src.user;
 
 import src.anlage.Anlage;
+import src.rtd.*;
 
 public class Kunde extends User {
 
@@ -15,5 +16,16 @@ public class Kunde extends User {
 
 		return a.place();
 	}
-}
 
+	public int order(int o) {
+		return o;
+
+	}
+
+	public String read() {
+
+		RTDR r = new RTDR();
+		return r.RTD();
+	}
+
+}

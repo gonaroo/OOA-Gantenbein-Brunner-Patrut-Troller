@@ -14,6 +14,8 @@ public class User {
 	}
 
 	public static void main (String[] args) {
+		
+		
 	
 		String FirstName;
 		FirstName = "Michael";
@@ -26,6 +28,8 @@ public class User {
 	int letters = user.length();
 	
 
+	
+	
 
 
 	System.out.println(user);
