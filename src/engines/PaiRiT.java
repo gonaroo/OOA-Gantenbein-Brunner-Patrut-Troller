@@ -32,7 +32,7 @@ public class PaiRiT extends MainEngine {
 		Algo2 e = new Algo2();
 
 		return e.AlgoTwo();
-		// da stimmt was nöd
+		// da stimmt was nï¿½d
 
 	}
 

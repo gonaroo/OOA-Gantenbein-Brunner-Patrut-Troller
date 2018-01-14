@@ -1,11 +1,19 @@
 package src.anlage;
 
+
 public class Anlage {
 
-	private double value = 0;
+	//private double value = 0;
 
-	public double place() {
-
+	public double place(double value) {
+		
+		if (value == 1) {
+			System.out.println("use EngineArbitrage");
+		}
+		else if(value == 2) {
+			System.out.println("use EnginePAIRIT");
+		}
+		
 		// if adress 1 then EngineArbitrage
 		// if adress 2 then EnginePaiRiT
 
