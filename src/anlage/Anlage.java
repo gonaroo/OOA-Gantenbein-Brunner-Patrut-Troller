@@ -1,7 +1,8 @@
 package src.anlage;
 
-
 public class Anlage {
+
+	private double value;
 
 	//private double value = 0;
 
@@ -22,7 +23,6 @@ public class Anlage {
 	}
 
 	public Anlage(double value) {
-
 		this.value = value;
 
 	}
