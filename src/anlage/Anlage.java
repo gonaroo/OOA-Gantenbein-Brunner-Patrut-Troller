@@ -2,7 +2,7 @@ package src.anlage;
 
 public class Anlage {
 
-	private double value;
+	public double value;
 
 	//private double value = 0;
 
