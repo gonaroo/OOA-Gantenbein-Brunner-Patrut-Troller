@@ -1,10 +1,13 @@
 package src.anlage;
 
-public class Anlage {
+import src.user.Kunde;
+
+public class Anlage extends Kunde{
+
 
 	private double value;
 
-	//private double value = 0;
+	//private double value = 0;x
 
 	public double place(double value) {
 		
