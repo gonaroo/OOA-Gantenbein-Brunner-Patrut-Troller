@@ -14,7 +14,7 @@ public class Kunde extends User {
 		// XOR
 		// NewEnginePaiRiT
 
-		return a.place();
+		return a.place(value);
 	}
 
 	public int order(int o) {

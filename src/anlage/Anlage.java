@@ -5,7 +5,7 @@ import src.user.Kunde;
 public class Anlage extends Kunde{
 
 
-	private double value;
+	public double value;
 
 	//private double value = 0;x
 
