@@ -5,7 +5,7 @@ import src.rtd.*;
 
 public class Kunde extends User {
 
-	public double place(double value) {
+	public int place(int value) {
 		// if address 0 then RTDR
 
 		// or

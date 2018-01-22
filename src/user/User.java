@@ -1,39 +1,42 @@
 package src.user;
 
+import java.util.Scanner;
+
 public class User {
-	
-	private String email;
 
-	public void setEmail(String email) {
-		this.email = email;
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		namefamilyname n = new namefamilyname();
+
+		System.out.println("Gib deinen Usernamen ein:");
+		n.setUsername(scanner.nextLine());
+
+		System.out.println("Dein Vorname:");
+		n.setFirstname(scanner.nextLine());
+		
+		System.out.println("Dein Nachname:");
+		n.setLastname(scanner.nextLine());
+		
+		System.out.println("Gib eine 6-stellige Zahl ein:");
+		n.setAccountnr(scanner.nextLine());
+
+		scanner.close();
+		
+		System.out.println(n.username);
 	}
-	
-	public String getEmail() {
-		return email;
 
-	}
-
-	public static void main (String[] args) {
-		
-		
-	
-		String FirstName;
-		FirstName = "Michael";
-		
-		String LastName;
-		LastName = "Gantenbein";
-		
-	String user;
-	user = FirstName + " " + LastName;
-	int letters = user.length();
-	
-
-	
-	
-
-
-	System.out.println(user);
-	System.out.println("Zeichenzahl " + letters);
-	
-	}
 }
+
+/*
+ * private String email;
+ * 
+ * public void setEmail(String email) {
+ * 
+ * this.email = email; }
+ * 
+ * public String getEmail() { return email;
+ * 
+ * }
+ */
