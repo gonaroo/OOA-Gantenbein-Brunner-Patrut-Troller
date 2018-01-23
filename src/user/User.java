@@ -8,23 +8,29 @@ public class User {
 
 		Scanner scanner = new Scanner(System.in);
 
-		namefamilyname n = new namefamilyname();
+		Kundendetails n = new Kundendetails();
 
 		System.out.println("Gib deinen Usernamen ein:");
 		n.setUsername(scanner.nextLine());
 
 		System.out.println("Dein Vorname:");
 		n.setFirstname(scanner.nextLine());
-		
+
 		System.out.println("Dein Nachname:");
 		n.setLastname(scanner.nextLine());
-		
-		System.out.println("Gib eine 6-stellige Zahl ein:");
+
+		System.out.println("Gib deine Kontonummer ein:");
 		n.setAccountnr(scanner.nextLine());
 
+		n.setFullname();
+
 		scanner.close();
-		
+
 		System.out.println(n.username);
+		System.out.println(n.fullname);
+		System.out.println(n.accountnr);
+		System.out.println("Schluss");
+
 	}
 
 }
