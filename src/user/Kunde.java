@@ -5,7 +5,9 @@ import src.rtd.*;
 
 public class Kunde extends User {
 
-	public int place(int value) {
+	
+	//muss double sein, weil von Anlage importiert!!
+	public double place(int value) {
 		// if address 0 then RTDR
 
 		// or
