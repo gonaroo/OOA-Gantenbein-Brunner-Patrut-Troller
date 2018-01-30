@@ -24,8 +24,7 @@ public class User {
 
 		scanner.close();
 		
-		System.out.println("Dein Username lautet: ");
-		System.out.print(n.username);
+		System.out.println(n.username);
 	}
 
 }
