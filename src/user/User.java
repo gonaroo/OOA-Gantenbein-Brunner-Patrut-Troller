@@ -8,7 +8,7 @@ public class User {
 
 		Scanner scanner = new Scanner(System.in);
 
-		namefamilyname n = new namefamilyname();
+		Kundendetails n = new Kundendetails();
 
 		System.out.println("Gib deinen Usernamen ein:");
 		n.setUsername(scanner.nextLine());
