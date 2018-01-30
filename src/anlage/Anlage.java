@@ -1,8 +1,6 @@
 package src.anlage;
 
-import src.user.Kunde;
-
-public class Anlage extends Kunde{
+public class Anlage{
 
 
 	public double value;
