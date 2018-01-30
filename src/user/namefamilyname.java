@@ -1,10 +1,9 @@
 package src.user;
 
-public class Kundendetails {
+public class namefamilyname {
 
 	private String firstname = "";
 	private String lastname = "";
-	public String fullname = "" ;
 	public String username = "";
 	public String accountnr = "";
 
@@ -14,7 +13,6 @@ public class Kundendetails {
 		this.firstname = fname;
 		this.lastname = lname;
 		this.accountnr = kontonr;
-		
 
 	}
 
@@ -48,14 +46,6 @@ public class Kundendetails {
 
 	public void setUsername(String uname) {
 		username = uname;
-	}
-
-	public String getFullname() {
-		return fullname;
-	}
-
-	public void setFullname() {
-		this.fullname = firstname + lastname;
 	}
 
 }
