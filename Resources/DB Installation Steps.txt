@@ -8,7 +8,7 @@ cd /Users/michael/Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller
 node node.js
 
 brew install mongodb
-mkdir -p mongo
+mkdir -p mongo 
 
 
 pwd|pbcopy

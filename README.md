@@ -1,6 +1,64 @@
 # OOA
 Projekt HWZ BWI A16
 
+brew update
+brew install node
+brew upgrade node
+test: node -v
+test: npm -v
+
+cd /Users/michael/Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller
+node node.js
+
+brew install mongodb
+mkdir -p mongo 
+
+
+pwd|pbcopy
+
+mongod --dbpath /Users/michael/Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller/mongo
+
+
+# Store data in /usr/local/var/mongodb instead of the default /data/db
+dbpath = /usr/local/var/mongodb
+The official 10gen Linux packages (Ubuntu/Debian or CentOS/Fedora) ship with a basic configuration file which is placed in /etc/mongodb.conf, and the MongoDB service reads this when it starts up. You could make your change here.
+
+brew services list
+
+To start mongodb:
+
+brew services start mongodb
+
+To stop mongodb if it's already running:
+
+brew services stop mongodb
+
+
+
+
+npm install -g loopback-cli
+
+lb
+
+cd mongoProject
+
+node .
+
+npm install --save loopback-connector-mongodb
+lb datasource mongoDS --connector MongoDB
+
+mongoDS
+MongoDB
+localhost
+27017
+kunden
+
+
+
+
+
+
+
 ----- Layout Vorlage
 
 # Requirements
