@@ -9,7 +9,7 @@ public class Anlage extends Kunde{
 
 	//private double value = 0;x
 
-	public double place(double value) {
+	public double place(int value) {
 		
 		if (value == 1) {
 			System.out.println("use EngineArbitrage");
