@@ -6,6 +6,4 @@ public abstract class MainEngine {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
 }

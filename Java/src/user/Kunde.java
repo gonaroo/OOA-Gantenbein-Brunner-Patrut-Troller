@@ -5,8 +5,7 @@ import src.rtd.*;
 
 public class Kunde extends User {
 
-	
-	//muss double sein, weil von Anlage importiert!!
+	// muss double sein, weil von Anlage importiert!!
 	public double place(int value) {
 		// if address 0 then RTDR
 
@@ -21,7 +20,6 @@ public class Kunde extends User {
 
 	public int order(int o) {
 		return o;
-
 	}
 
 	public String read() {
@@ -29,5 +27,4 @@ public class Kunde extends User {
 		RTDR r = new RTDR();
 		return r.RTD();
 	}
-
 }

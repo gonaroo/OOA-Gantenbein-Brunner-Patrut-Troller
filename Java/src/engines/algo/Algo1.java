@@ -18,11 +18,9 @@ public class Algo1 {
 
 	public String AlgoOne() {
 		return AlgoOne;
-
 	}
 
 	public void setAlgoOne(String AlgoOne) {
 		this.AlgoOne = AlgoOne;
 	}
-
 }

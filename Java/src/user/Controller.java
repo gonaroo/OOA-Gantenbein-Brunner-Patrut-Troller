@@ -10,7 +10,5 @@ public class Controller extends User{
 		Arbitrage c = new Arbitrage(value);
 
 		return c.analyze();
-
 	}
-
 }

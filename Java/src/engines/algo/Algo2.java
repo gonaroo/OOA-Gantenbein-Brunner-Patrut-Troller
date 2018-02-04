@@ -11,7 +11,6 @@ public class Algo2 {
 
 	public String AlgoTwo() {
 		return AlgoTwo;
-
 	}
 
 	public void setAlgoTwo(String AlgoTwo) {

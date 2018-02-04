@@ -9,8 +9,8 @@ public class Arbitrage extends MainEngine {
 		// TODO Auto-generated constructor stub
 	}
 
-	//public double placeArbitrage
-	
+	// public double placeArbitrage
+
 	public String analyze() {
 
 		String readLogs;
@@ -30,4 +30,3 @@ public class Arbitrage extends MainEngine {
 	}
 
 }
-

@@ -8,14 +8,11 @@ public class Kundendetails {
 	public String username = "";
 	public String accountnr = "";
 
-	// Konstruktor
 	public void Nutzer(String uname, String fname, String lname, String kontonr) {
 		this.username = uname;
 		this.firstname = fname;
 		this.lastname = lname;
 		this.accountnr = kontonr;
-		
-
 	}
 
 	public String getFirstname() {
@@ -57,5 +54,4 @@ public class Kundendetails {
 	public void setFullname() {
 		this.fullname = firstname + lastname;
 	}
-
 }

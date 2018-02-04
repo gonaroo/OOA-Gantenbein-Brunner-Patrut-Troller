@@ -16,10 +16,5 @@ public class Interface {
 		System.out.println(kc.analyze(1));
 		System.out.println(kk.place(123));
 		System.out.println(kk.read());
-
-
-		// HALLO UPDATE
-
 	}
-
 }

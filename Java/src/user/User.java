@@ -15,18 +15,17 @@ public class User {
 
 		System.out.println("Dein Vorname:");
 		n.setFirstname(scanner.nextLine());
-		
+
 		System.out.println("Dein Nachname:");
 		n.setLastname(scanner.nextLine());
-		
+
 		System.out.println("Gib eine 6-stellige Zahl ein:");
 		n.setAccountnr(scanner.nextLine());
 
 		scanner.close();
-		
+
 		System.out.println(n.username);
 	}
-
 }
 
 /*
