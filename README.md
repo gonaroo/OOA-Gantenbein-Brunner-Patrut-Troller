@@ -1,62 +1,6 @@
 # OOA
 Projekt HWZ BWI A16
 
-brew update
-brew install node
-brew upgrade node
-test: node -v
-test: npm -v
-
-cd /Users/michael/Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller
-node node.js
-
-brew install mongodb
-mkdir -p mongo 
-
-
-pwd|pbcopy
-
-mongod --dbpath /Users/michael/Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller/mongo
-
-
-# Store data in /usr/local/var/mongodb instead of the default /data/db
-dbpath = /usr/local/var/mongodb
-The official 10gen Linux packages (Ubuntu/Debian or CentOS/Fedora) ship with a basic configuration file which is placed in /etc/mongodb.conf, and the MongoDB service reads this when it starts up. You could make your change here.
-
-brew services list
-
-To start mongodb:
-
-brew services start mongodb
-
-To stop mongodb if it's already running:
-
-brew services stop mongodb
-
-
-
-
-npm install -g loopback-cli
-
-lb
-
-cd mongoProject
-
-node .
-
-npm install --save loopback-connector-mongodb
-lb datasource mongoDS --connector MongoDB
-
-mongoDS
-MongoDB
-localhost
-27017
-kunden
-
-
-
-
-
 
 
 ----- Layout Vorlage
@@ -130,30 +74,6 @@ Navigate to <b>/private/</b> directory and start background scripts:<br>
 <pre>screen -dmS liskstats php liskstats.php</pre>
 <br>
 
-<b>Optional Balance checker</b> - Simple script to compare total LISK value stored in database in reference to actual LISK stored on delegate account.
-<pre>cd helpers
-php check.php</pre>
-
-<br>
-All background scripts can be easily accessed with
-<pre>
-NAME = "processing" or "stats" or "withdraw" or "bestnode" or "liskstats"
-screen -x NAME
-</pre>
-Example
-<pre>
-screen -x processing
-</pre>
-
-## Forging productivity
-Optionally you can use [lisk-best-forger](https://github.com/karek314/lisk-best-forger) background script to improve forging productivity.
-<pre>
-cd private/forging
-nano config.php
-</pre>
-In private/config.php you need to add trusted nodes and it's ports. Each specified server needs to have whitelisted IP address of server which will be used to run this script. As described [here](https://docs.lisk.io/docs).
-Passphrase will be taken from main configuration file. For more details visit main [lisk-best-forger](https://github.com/karek314/lisk-best-forger) repository.
-
 #### Usage
 <pre>
 screen -dmS bestforger php daemon.php
@@ -184,22 +104,3 @@ api/info/
 <pre>
 api/info/forged/
 </pre>
-
-# Logs
-As soon any of background scripts will be excuted, <b>logs</b> directory will appear in <b>private</b> directory. It will store all logs of all background scripts.
-
-# Migration from older version of pool
-In past all chart data was stored in database tables, however with millions of rows and cheap vps it could have been possible bottleneck with thousands of voters. If you are pool operator and you want to keep all statistics history.
-1. Stop all background scripts
-2. Navigate to <b>/helpers/</b> directory in <b>/private/</b>
-3. Execute ```php db2files.php all``` or ```screen -dmS dump php db2files.php all```
-4. Wait until it finish, it can take hours for huge database. If your connection might drop, possibly execute this as background job choosing second command.
-5. Start updated background scripts.
-6. Tables <b>pool_xxx</b> and <b>miner_balance</b> can be deleted.
-
-# Contributing
-If you want to contribute, fork and pull request or open issue.
-
-# License
-Everything is under MIT License (MIT) except [Front-end (site theme) which is paid.](http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/)<br>
-I do own license, so better buy license or use your own front-end. In future it will be rewritten from scratch.
