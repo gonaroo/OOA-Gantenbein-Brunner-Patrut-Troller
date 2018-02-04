@@ -12,11 +12,11 @@ public class ConnectHSQLDB {
 		Statement statement = null;
 		try {
 			Class.forName("org.hsqldb.jdbcDriver");
-			connection = DriverManager.getConnection("jdbc:hsqldb:file:C:/JavaInstallation/HSQLDB/DB", "SA", "");
+			connection = DriverManager.getConnection("jdbc:hsqldb:file:C:/git/OOA-Gantenbein-Brunner-Patrut-Troller/Java/lib", "SA", "");
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("SELECT Salary FROM SALARYDETAILS WHERE Emptitle='54601A'");
+			resultSet = statement.executeQuery("SELECT Wallet FROM KUNDEN WHERE ID='1'");
 			while (resultSet.next()) {
-				System.out.println("EMPLOYEE Salary:" + resultSet.getString("Salary"));
+				System.out.println("Customer Wallet:" + resultSet.getString("Wallet"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
