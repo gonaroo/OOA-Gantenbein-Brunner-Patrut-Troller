@@ -6,28 +6,33 @@ brew install node
 brew upgrade node
 test: node -v
 test: npm -v
-cd /Users/michael/Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller
+cd /Users/michael/Documents/Github
 node node.js
 
 brew install mongodb
 mkdir -p mongo 
-
 pwd|pbcopy
-mongod --dbpath /Users/michael/Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller/mongo
+
+cd
+mongod --dbpath /Users/michael/Documents/Github/mongo
 
 # Store data in /usr/local/var/mongodb instead of the default /data/db
 dbpath = /usr/local/var/mongodb
-The official 10gen Linux packages (Ubuntu/Debian or CentOS/Fedora) ship with a basic con-figuration file which is placed in /etc/mongodb.conf, and the MongoDB service reads this when it starts up.
+
+# The official 10gen Linux packages (Ubuntu/Debian or CentOS/Fedora) ship with a basic con-figuration file which is placed in /etc/mongodb.conf, and the MongoDB service reads this when it starts up.
 
 brew services list
 brew services start mongodb
 brew services stop mongodb
+brew services restart mongodb
 
 npm install -g loopback-cli
 lb
 
+Documents\Github\OOA-Gantenbein-Brunner-Patrut-Troller\mongoDB
 cd mongoProject
-node.
+node .
+#mit Abstand
 
 npm install --save loopback-connector-mongodb
 lb datasource mongoDS --connector MongoDB
