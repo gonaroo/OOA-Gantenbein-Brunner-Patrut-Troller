@@ -1,0 +1,16 @@
+/CompletableToListenableFutureAdapter.class
+/DelegatingCompletableFuture.class
+/FailureCallback.class
+/FutureAdapter$State.class
+/FutureAdapter.class
+/ListenableFuture.class
+/ListenableFutureAdapter$1.class
+/ListenableFutureAdapter.class
+/ListenableFutureCallback.class
+/ListenableFutureCallbackRegistry$State.class
+/ListenableFutureCallbackRegistry.class
+/ListenableFutureTask.class
+/SettableListenableFuture$SettableTask.class
+/SettableListenableFuture.class
+/SuccessCallback.class
+/package-info.class
