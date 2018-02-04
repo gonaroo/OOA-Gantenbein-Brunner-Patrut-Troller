@@ -6,6 +6,50 @@ CREATE TABLE IF NOT EXISTS kunden (
   Amount INT NOT NULL,
 ) 
 
-INSERT INTO kunden ('00001A', 04.02.2018, info@test.com, 0xeXYZ123, 5000);
-INSERT INTO kunden ('00002A', 04.02.2018, info@michael.com, 0xeXYZ1234, 1000);
-INSERT INTO kunden ('00003A', 04.02.2018, info@gantenbein.com, 0xeXYZZ123, 100);
+
+
+
+-------------
+
+
+
+CREATE TABLE IF NOT EXISTS KUNDEN (
+  ID DECIMAL NOT NULL,
+  DATE TIMESTAMP,
+  EMAIL VARCHAR(24) NOT NULL,
+  WALLET VARCHAR(36) NOT NULL,
+  AMOUNT INT NOT NULL,
+) 
+
+---------------------------
+
+INSERT INTO "PUBLIC"."KUNDEN"
+( "ID", "DATE", "EMAIL", "WALLET", "AMOUNT" )
+VALUES (2, timestamp '2090-07-15 00:00:00', 'info@test.com', '0xeXYZ123', 5000);
+
+
+
+
+
+---------------
+
+
+
+
+
+
+Forum
+INSERT INTO OWN_TABLE
+  (ID, DATE, EMAIL, WALLET) 
+VALUES
+  (2, DATE '2090-07-15', 'info@test.com', '0xeXYZ123', 5000);
+
+
+
+
+INSERT INTO kunden(ID, Date, Email, Wallet, Amount) VALUES ('00001A', 04.02.2018, 'info@test.com', '0xeXYZ123', 5000);
+
+
+INSERT INTO kunden ('00001A', 04.02.2018, 'info@test.com', '0xeXYZ123', 5000);
+INSERT INTO kunden ('00002A', 04.02.2018, 'info@michael.com', '0xeXYZ1234', 1000);
+INSERT INTO kunden ('00003A', 04.02.2018, 'info@gantenbein.com', '0xeXYZZ123', 100);

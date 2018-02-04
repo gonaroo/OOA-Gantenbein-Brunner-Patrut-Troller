@@ -1,0 +1,9 @@
+/AuthBeanMultiplexer.class
+/AuthFunctionBean.class
+/AuthUtils.class
+/DenyException.class
+/HsqldbSlaveAuthBean.class
+/JaasAuthBean$UPCallbackHandler.class
+/JaasAuthBean.class
+/LdapAuthBean.class
+/LdapAuthBeanTester.class

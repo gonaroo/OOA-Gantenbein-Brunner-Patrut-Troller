@@ -18,10 +18,12 @@ public class HsqlDBmanager {
         // con = DriverManager.getConnection( "jdbc:hsqldb:hsql://localhost", "SA", ""); 
         // con = DriverManager.getConnection( "jdbc:hsqldb:file:C:/git/OOA-Gantenbein-Brunner-Patrut-Troller/Java/lib", "SA", ""); 
          
-         con = DriverManager.getConnection( "jdbc:hsqldb:mem:.", "SA", ""); 
+         con = DriverManager.getConnection( "jdbc:hsqldb:hsql://localhost/", "SA", ""); 
          
          stmt = con.createStatement(); 
-         result = stmt.executeUpdate("INSERT INTO KUNDEN VALUES (2, timestamp '2090-07-15 00:00:00', 'info@test.com', '0xeXYZ123', 5000, NOW())"); 
+         
+         result = stmt.executeUpdate("CREATE TABLE IF NOT EXISTS KUNDEN ID DECIMAL NOT NULL, DATE TIMESTAMP, EMAIL VARCHAR(24) NOT NULL, WALLET VARCHAR(36) NOT NULL, AMOUNT INT NOT NULL");
+         result = stmt.executeUpdate("INSERT INTO PUBLIC.KUNDEN VALUES (1, timestamp '2090-07-15 00:00:00', 'info@test.com', '0xeXYZ123', 5000, NOW())"); 
          con.commit(); 
       }catch (Exception e) { 
          e.printStackTrace(System.out); 
@@ -29,4 +31,6 @@ public class HsqlDBmanager {
       System.out.println(result+" rows effected"); 
       System.out.println("Rows inserted successfully"); 
    } 
-} 
+}
+
+//this file is outdated, please use ConnectHSQLDB instead!
