@@ -9,15 +9,16 @@ Projekt HWZ BWI A16
 
 ```php
 brew update
+brew install node
+brew upgrade node
 ```
 
 # Test Prerequisities
 
 ```php
-brew install node
-brew upgrade node
 test: node -v
 test: npm -v
+
 cd /Users/michael/Documents/Github
 node node.js
 ```
@@ -26,8 +27,8 @@ node node.js
 
 ```php
 brew install mongodb
-mkdir -p mongo 
-pwd|pbcopy
+mkdir -p mongo
+pwd|pbcopy //<- copy path for later usage
 ```
 # Test MongoDB
 
@@ -55,21 +56,14 @@ cd
 mongod --dbpath /Users/michael/Documents/Github/mongo
 ```
 
-# Install Loopback
+# Install Loopback & Create API's
 
 ```php
 npm install -g loopback-cli
 lb
 ```
 
-# Usage MongoDB
-
-```php
-cd Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller/Database/mongoDB/mongoProject
-node . //<- mit Abstand
-```
-
-# Usage Loopback
+# Install Loopback-MongoDB-Connector
 
 ```php
 npm install --save loopback-connector-mongodb
@@ -79,12 +73,19 @@ lb datasource mongoDS --connector MongoDB
 # Configuration Loopback
 
 ```php
-'host' => 'localhost',    //<- dont change if mongodb is running on the same machine
-'username' => 'SA',     //<- Database user
-'password' => '',  //<- blank Database Password
-'mongoDS' => 'mongoDB',    //<- Database Name
+'host' => 'localhost', //<- dont change if mongodb is running on the same machine
+'username' => 'SA', //<- Database user
+'password' => '', //<- blank Database Password
+'mongoDS' => 'mongoDB', //<- Database Name
 'protocol' => 'http', //<-pick http or https
 'port' => '27017', //<- standard
+```
+
+# Usage Node with MongoDB
+
+```php
+cd Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller/Database/mongoDB/mongoProject
+node . //<- mit Abstand
 ```
 
 # Usage HSQL Database Manager
@@ -97,10 +98,8 @@ CREATE TABLE IF NOT EXISTS KUNDEN (
   DATE TIMESTAMP,
   EMAIL VARCHAR(24) NOT NULL,
   WALLET VARCHAR(36) NOT NULL,
-  AMOUNT INT NOT NULL,
-) 
+  AMOUNT INT NOT NULL,);
 
-INSERT INTO "PUBLIC"."KUNDEN"
-( "ID", "DATE", "EMAIL", "WALLET", "AMOUNT" )
+INSERT INTO "PUBLIC"."KUNDEN" ( "ID", "DATE", "EMAIL", "WALLET", "AMOUNT" )
 VALUES (2, timestamp '2090-07-15 00:00:00', 'info@test.com', '0xeXYZ123', 5000);
 ```
