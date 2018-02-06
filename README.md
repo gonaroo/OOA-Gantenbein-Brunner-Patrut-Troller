@@ -5,78 +5,59 @@ Projekt HWZ BWI A16
 ----- Layout Vorlage
 
 # Requirements
-<a href="https://mariadb.org" target="_blank">MariaDB server</a><br>
-<a href="https://memcached.org" target="_blank">Memcached</a><br>
+<a href="https://mongodb.com" target="_blank">MongoDB server</a><br>
 <a href="http://nginx.org" target="_blank">Nginx</a><br>
-<a href="https://lisk.io/documentation" target="_blank">Lisk Node</a><br>
-<a href="http://www.highcharts.com" target="_blank">Highcharts (included in project)</a><br>
  
 # Installation
-Liskpool now fully relies on [Lisk-PHP](https://github.com/karek314/lisk-php) to interact with Lisk node, including transaction signing.
-```sh
-cd liskpool
-git submodule update --init --recursive
-cd lisk-php
-bash setup.sh
-cd ..
-apt-get install nginx mariadb-server memcached php-memcached php php-curl
-```
-Setup your mysql server, nginx and import database scheme <pre>lisk_pool_scheme_db.sql</pre>
 
-Navigate to config.php
+'brew update
 
-<b>lisk_nodes & lisk_ports</b>
-You can add here more independent nodes which are used to determine node which is currently at latest height to keep pool updated with most recent state of network.
+'brew install node
+'brew upgrade node
+'test: node -v
+'test: npm -v
+'cd /Users/michael/Documents/Github
+'node node.js
+
+'brew install mongodb
+'mkdir -p mongo 
+'pwd|pbcopy
+
+# Usage
+
+'cd
+'mongod --dbpath /Users/michael/Documents/Github/mongo
+
+<b>Store data in /usr/local/var/mongodb instead of the default /data/db</b>
+
+'dbpath = /usr/local/var/mongodb
+
+<b>The official 10gen Linux packages (Ubuntu/Debian or CentOS/Fedora) ship with a basic con-figuration file which is placed in /etc/mongodb.conf, and the MongoDB service reads this when it starts up.</b>
+
+'brew services list
+'brew services start mongodb
+'brew services stop mongodb
+'brew services restart mongodb
+
+'npm install -g loopback-cli
+'lb
+
+'Documents\Github\OOA-Gantenbein-Brunner-Patrut-Troller\mongoDB
+'cd mongoProject
+'node . //<- mit Abstand
+
+'npm install --save loopback-connector-mongodb
+'lb datasource mongoDS --connector MongoDB
+
 
 ```php
 $lisk_nodes = array(0 => 'localhost',1 => '123.123.123.123');
 $lisk_ports = array(0 => '8000',1 => '8000');
 
-'host' => 'localhost',    //<- dont change if mariadb is running on the same machine
-'username' => 'root',     //<- Database user
-'password' => 'dbpass',  //<- Database Password
-'bdd' => 'lisk',    //<- Database Name
-'lisk_host' => $lisk_nodes,
-'lisk_port' => $lisk_ports,
+'host' => 'localhost',    //<- dont change if mongodb is running on the same machine
+'username' => 'SA',     //<- Database user
+'password' => '',  //<- blank Database Password
+'mongoDS' => 'mongoDB',    //<- Database Name
 'protocol' => 'http', //<-pick http or https
-'pool_fee' => '25.0%',     //<- adjustable pool fee as float for ex. "25.0%"
-'pool_fee_payout_address' => '17957303129556813956L',   //<- Payout address if fee > 0.0
-'delegate_address' => '17957303129556813956L',    //<- Delegate address - must be valid forging delegate address
-'payout_threshold' => '1',    //<- Payout threshold in LISK
-'fixed_withdraw_fee' => '0.1',    //<- Fixed Withdraw fee in LISK
-'withdraw_interval_in_sec' => '43200',   //<- Withdraw script interval represented in seconds
-'secret' => 'passphrase1',    //<- Main passphrase the same your as in your forging delegate
-'fancy_withdraw_hub' => '', //<-beta withdraw hub, leave empty for normal withdraws
-'secondSecret' => 'passphrase2', //<- Second passphrase, if you dont have one leave it empty ex. ""
-'public_directory' => 'private', //<- directory name of public dir
-'cap_balance' => '150000000000000', //balance to cap voter votepower, default - anything over 1.5m LSK will be reduced to 1.5m
-'slow_withdraw' => true //with payouts >1k lisk tx pool limit problem
+'port' => '27017', //<- standard
 ```
-
-# Usage
-Start LISK node as usual, and set up it to forging. But please note that you can forge with different node that one used for hosting pool.
-
-# Public API
-<b>Specified voter balance data for balance chart, respectively entitled pool balance, network balance and withdraw amount.</b>
-<pre>
-data/voters/ADDRESS.json
-data/voters/balance/ADDRESS.json
-data/voters/withdraw/ADDRESS.json
-</pre>
-<b>General data for charts</b>
-<pre>
-data/approval.json
-data/balance.json
-data/rank.json
-data/voters.json
-data/reserve.json
-data/productivity.json
-</pre>
-<b>General pool info</b>
-<pre>
-api/info/
-</pre>
-<b>Current forged balance for each voter / contributor</b>
-<pre>
-api/info/forged/
-</pre>
