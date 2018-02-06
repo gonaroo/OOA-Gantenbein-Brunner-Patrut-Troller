@@ -5,11 +5,13 @@ Projekt HWZ BWI A16
 <a href="https://mongodb.com" target="_blank">MongoDB server</a><br>
 <a href="http://nginx.org" target="_blank">Nginx</a><br>
  
-# Installation
+# Install Prerequisites
 
 ```php
-'brew update
+brew update
 ```
+
+# Test Prerequisities
 
 ```php
 brew install node
@@ -20,26 +22,14 @@ cd /Users/michael/Documents/Github
 node node.js
 ```
 
+# Install MongoDB
+
 ```php
 brew install mongodb
 mkdir -p mongo 
 pwd|pbcopy
 ```
-
-# Usage
-
-```php
-cd
-mongod --dbpath /Users/michael/Documents/Github/mongo
-```
-
-<b>Store data in /usr/local/var/mongodb instead of the default /data/db</b>
-
-```php
-dbpath = /usr/local/var/mongodb
-```
-
-<b>The official 10gen Linux packages (Ubuntu/Debian or CentOS/Fedora) ship with a basic con-figuration file which is placed in /etc/mongodb.conf, and the MongoDB service reads this when it starts up.</b>
+# Test MongoDB
 
 ```php
 brew services list
@@ -48,21 +38,45 @@ brew services stop mongodb
 brew services restart mongodb
 ```
 
+# General Configuration MongoDB
+
+<b>The official 10gen Linux packages (Ubuntu/Debian or CentOS/Fedora) ship with a basic con-figuration file which is placed in /etc/mongodb.conf, and the MongoDB service reads this when it starts up.</b>
+
+<b>Store data in /usr/local/var/mongodb instead of the default /data/db</b>
+
+```php
+dbpath = /usr/local/var/mongodb
+```
+
+<b>Instead we chose to save the DB inside Github for multidevice usage.</b>
+
+```php
+cd
+mongod --dbpath /Users/michael/Documents/Github/mongo
+```
+
+# Install Loopback
+
 ```php
 npm install -g loopback-cli
 lb
 ```
 
+# Usage MongoDB
+
 ```php
-Documents\Github\OOA-Gantenbein-Brunner-Patrut-Troller\mongoDB
-cd mongoProject
+cd Documents/Github/OOA-Gantenbein-Brunner-Patrut-Troller/Database/mongoDB/mongoProject
 node . //<- mit Abstand
 ```
+
+# Usage Loopback
 
 ```php
 npm install --save loopback-connector-mongodb
 lb datasource mongoDS --connector MongoDB
 ```
+
+# Configuration Loopback
 
 ```php
 'host' => 'localhost',    //<- dont change if mongodb is running on the same machine
@@ -71,4 +85,22 @@ lb datasource mongoDS --connector MongoDB
 'mongoDS' => 'mongoDB',    //<- Database Name
 'protocol' => 'http', //<-pick http or https
 'port' => '27017', //<- standard
+```
+
+# Usage HSQL Database Manager
+
+<b>Create Table, Insert Query</b>
+
+```php
+CREATE TABLE IF NOT EXISTS KUNDEN (
+  ID DECIMAL PRIMARY KEY,
+  DATE TIMESTAMP,
+  EMAIL VARCHAR(24) NOT NULL,
+  WALLET VARCHAR(36) NOT NULL,
+  AMOUNT INT NOT NULL,
+) 
+
+INSERT INTO "PUBLIC"."KUNDEN"
+( "ID", "DATE", "EMAIL", "WALLET", "AMOUNT" )
+VALUES (2, timestamp '2090-07-15 00:00:00', 'info@test.com', '0xeXYZ123', 5000);
 ```

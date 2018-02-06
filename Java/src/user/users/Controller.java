@@ -1,6 +1,7 @@
-package src.user;
+package src.user.users;
 
 import src.engines.Arbitrage;
+import src.user.User;
 
 public class Controller extends User{
 

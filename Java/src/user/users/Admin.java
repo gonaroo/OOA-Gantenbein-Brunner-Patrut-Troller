@@ -1,6 +1,7 @@
-package src.user;
+package src.user.users;
 
 import src.engines.PaiRiT;
+import src.user.User;
 
 public class Admin extends User {
 

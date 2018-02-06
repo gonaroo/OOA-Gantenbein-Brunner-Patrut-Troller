@@ -1,9 +1,9 @@
 
 package src;
 
-import src.user.Admin;
-import src.user.Controller;
-import src.user.Kunde;
+import src.user.users.Admin;
+import src.user.users.Controller;
+import src.user.users.Kunde;
 
 public class Interface {
 	public static void main(String[] args) {

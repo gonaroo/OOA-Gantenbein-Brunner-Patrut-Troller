@@ -1,6 +1,7 @@
 package src.engines;
 
 import src.engines.algo.Algo1;
+import src.engines.main.MainEngine;
 
 public class Arbitrage extends MainEngine {
 

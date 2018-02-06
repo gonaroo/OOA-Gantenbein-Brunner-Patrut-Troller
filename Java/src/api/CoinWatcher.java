@@ -2,6 +2,6 @@ package src.api;
 
 public class CoinWatcher {
 
-	// implementiert CoinWatcher die ltc API's oder werden die ltc API's extended?
+	// Frage: implementiert CoinWatcher die LTC API's oder werden die LTC API's extended?
 
 }

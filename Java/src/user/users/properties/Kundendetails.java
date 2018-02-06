@@ -1,4 +1,4 @@
-package src.user;
+package src.user.users.properties;
 
 public class Kundendetails {
 

@@ -1,4 +1,4 @@
-package src.db.hsqldb;
+package src.api;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,6 +1,6 @@
 package src.anlage;
 
-import src.user.Kunde;
+import src.user.users.Kunde;
 
 public class Anlage extends Kunde {
 

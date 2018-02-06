@@ -1,7 +1,9 @@
-package src.user;
+package src.user.users;
 
 import src.anlage.Anlage;
-import src.rtd.*;
+import src.api.RealTimeDataReport;
+import src.api.rtd.*;
+import src.user.User;
 
 public class Kunde extends User {
 
@@ -24,7 +26,7 @@ public class Kunde extends User {
 
 	public String read() {
 
-		RTDR r = new RTDR();
+		RealTimeDataReport r = new RealTimeDataReport();
 		return r.RTD();
 	}
 }

@@ -1,6 +1,7 @@
 package src.engines;
 
 import src.engines.algo.Algo2;
+import src.engines.main.MainEngine;
 
 public class PaiRiT extends MainEngine {
 

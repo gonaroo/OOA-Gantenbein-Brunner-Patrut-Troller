@@ -1,3 +1,6 @@
 /litecoin.class
 /CoinWatcher.class
 /API.class
+/ConnectHSQLDB.class
+/RTDR.class
+/RealTimeDataReport.class

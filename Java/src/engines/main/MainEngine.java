@@ -1,4 +1,4 @@
-package src.engines;
+package src.engines.main;
 
 public abstract class MainEngine {
 

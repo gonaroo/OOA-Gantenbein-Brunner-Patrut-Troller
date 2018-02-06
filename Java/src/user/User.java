@@ -2,6 +2,8 @@ package src.user;
 
 import java.util.Scanner;
 
+import src.user.users.properties.Kundendetails;
+
 public class User {
 
 	public static void main(String[] args) {

@@ -1,6 +1,8 @@
-package src.rtd;
+package src.api;
 
-public class RTDR {
+import src.api.rtd.*;
+
+public class RealTimeDataReport extends RTDF{
 
 	// import http:// Table XY
 	// CSV Import Library

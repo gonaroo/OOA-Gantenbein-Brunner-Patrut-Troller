@@ -1,4 +1,4 @@
-package src.db.mongodb;
+package src.api.db.mongodb;
 
 public class MongoDBmanager {
 

@@ -1,8 +1,10 @@
-package src.db.hsqldb;
+package src.api.db.hsqldb;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement; 
+
+//see comment on bottom
 
 //InsertQuery
 public class HsqlDBmanager {
