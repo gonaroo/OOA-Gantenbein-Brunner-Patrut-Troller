@@ -2,6 +2,9 @@
 Projekt HWZ BWI A16
 
 # Requirements
+<a href="http://brew.sh" target="_blank">Brew</a><br>
+<a href="http://loopback.io" target="_blank">Loopback</a><br>
+<a href="http://npmjs.com" target="_blank">NPM</a><br>
 <a href="https://mongodb.com" target="_blank">MongoDB server</a><br>
 <a href="http://nginx.org" target="_blank">Nginx</a><br>
  
