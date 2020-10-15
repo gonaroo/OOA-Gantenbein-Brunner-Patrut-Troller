@@ -1,6 +1,3 @@
-# OOA
-Projekt HWZ BWI A16
-
 # Requirements
 <a href="http://brew.sh" target="_blank">Brew</a><br>
 <a href="http://loopback.io" target="_blank">Loopback</a><br>
@@ -73,16 +70,6 @@ npm install --save loopback-connector-mongodb
 lb datasource mongoDS --connector MongoDB
 ```
 
-# Configuration Loopback
-
-```php
-'host' => 'localhost', //<- dont change if mongodb is running on the same machine
-'username' => 'SA', //<- Database user
-'password' => '', //<- blank Database Password
-'mongoDS' => 'mongoDB', //<- Database Name
-'protocol' => 'http', //<-pick http or https
-'port' => '27017', //<- standard
-```
 
 # Usage Node with MongoDB
 
